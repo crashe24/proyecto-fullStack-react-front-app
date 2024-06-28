@@ -32,7 +32,7 @@ export async function action({request, params} : ActionFunctionArgs) {
     }
 
     if (params.id !== undefined) {
-      await editProductById(data, params.id)
+      await editProductById(data, Number(params.id))
       return  redirect('/')
 
     }
